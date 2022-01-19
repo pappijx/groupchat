@@ -6,14 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
-
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
 
     <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="clientScript.js"></script>
     <style>
         * {
             margin: 0;
@@ -92,19 +87,12 @@
         }
 
         input {
-            transition: 0.4s;
             border: none;
-            outline: none !important;
+            outline: none;
             height: 32px;
             margin-top: 12px;
             background-color: aliceblue;
             padding: 5px;
-            border-radius: 5px;
-        }
-
-        input:focus {
-            transition: 0.4s;
-            box-shadow: 0px 2px 5px rgb(218, 234, 255);
         }
 
         .popup-overlay {
@@ -208,42 +196,15 @@
     <div class="messageWrapper">
         <div id="totalUsers">
         </div>
-
         <div id="message-container">
         </div>
-
-        <form id="send-container">
-            <div style="display: flex;align-items: center;">
-                <input style="width: 80%;" class="one" data-emoji-input="unicode" data-emojiable="true" type="text"
-                    id="message-input" placeholder="Enter your message here" autocomplete="off" />
-                <span class="first-btn" style="font-size: 28px;margin: auto;cursor: pointer;margin-top: 12px;">
-                    😀
-                </span>
-            </div>
-            <button type="submit" id="send-button">Send message</button>
-
-        </form>
     </div>
 
-    <script src="vanillaEmojiPicker.js"></script>
-    <script>
+    <div id="totalUsers">
 
-        new EmojiPicker({
-            trigger: [
-                {
-                    selector: '.first-btn',
-                    insertInto: ['.one', '.two'] // '.selector' can be used without array
-                },
-                {
-                    selector: '.second-btn',
-                    insertInto: '.two'
-                }
-            ],
-            closeButton: true,
-            //specialButtons: green
-        });
+    </div>
 
-    </script>
+
 </body>
 
 </html>
