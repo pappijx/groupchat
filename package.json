@@ -1,0 +1,17 @@
+{
+  "name": "chatonweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon sever.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
